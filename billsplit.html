@@ -5,32 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>billsplit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <style>
-        #btn-add-new {
-            background-color:#00c8fa;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script src="js/scripts.js"></script>
   </head>
-  <body>
-    <script type="text/javascript">
-        function addNewPerson() {
-            var newPersonHtml = "<div><input type=\"text\" name=\"personName\"" +
-            " placeholder=\"name\" size=\"20\" checked></div>";
-            var mainBlockElem = document.getElementById("main_block");
-            mainBlockElem.innerHTML += newPersonHtml;
-        }
-    </script>
+  <body class="bg-light">
+
     <div id="main_nav" class="container">
         <h1>Bill test</h1>
-        <button id="btn-add-new" class="btn btn-primary" 
-        onclick="addNewPerson();">Add new ppl</button>
+        <button id="btn-add-new" class="btn btn-primary" onclick="addNewPerson();">
+            Add new person
+        </button>
         <a class="btn btn-primary" href="./index.html">Home</a>
     </div>
-    <hr/>
+
     <div id="main_block" class="container">
-        <div>
-            <input type="text" name="personName" placeholder="name" size="20" checked>
-        </div>
+        <hr/>
+        <form class="col-7">
+            <div class="mb-1">
+                <input class="form-control" type="text" name="personName" placeholder="person name" size="20" checked>
+            </div>
+            <div id="confirm-data-1" class="item-data">
+                ItemName --> Price<br/>--------------------------<br/>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control input-name" type="text" name="item" placeholder="item name" size="20" checked>
+                </div>
+                <div class="col-4">
+                    <input class="form-control input-price" type="number" name="price" placeholder="99.9" step="0.01" size="10" checked>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-outline-primary" onclick="addFixedItem(this);">
+                        <b>+</b>
+                        <!-- <object data="svg/plus-lg.svg"></object> -->
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
     <hr/>
   </body>
