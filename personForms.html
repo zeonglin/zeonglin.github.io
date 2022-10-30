@@ -1,0 +1,23 @@
+<hr/>
+<form class="col-7">
+    <div class="mb-1">
+        <input class="form-control input-person" type="text" name="personName" placeholder="person name" size="20" checked>
+    </div>
+    <div id="confirm-data-1" class="item-data">
+        ItemName --> Price<br/>--------------------------<br/>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <input class="form-control item-name" type="text" name="item" placeholder="item name" size="20" checked>
+        </div>
+        <div class="col-4">
+            <input class="form-control item-price" type="number" name="price" placeholder="99.9" step="0.01" size="10" checked>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary" onclick="addFixedItem(this);">
+                <b>+</b>
+                <!-- <object data="svg/plus-lg.svg"></object> -->
+            </button>
+        </div>
+    </div>
+</form>
